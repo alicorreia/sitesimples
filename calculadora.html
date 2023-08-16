@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Site Simples</title>
+    <!-- Adicione o link para o CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site</h1>
+    </header>
+
+    <div class="container">
+        <nav class="text-center mb-4">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Página Inicial</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                <li class="nav-item"><a class="nav-link" href="calculadora.html">Calculadora</a></li> <!-- Link para a nova página -->
+                <li class="nav-item"><a class="nav-link" href="funcao.html">Funcao</a></li>
+            </ul>
+        </nav>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Meu Site Simples</title>
+            <!-- Adicione o link para o CSS do Bootstrap -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <style>
+                /* Estilos existentes... */
+                .calculator {
+                    max-width: 300px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+            </style>
+        </head>
+        <body>
+            
+        
+            <div class="container">
+                <nav class="text-center mb-4">
+                    <!-- Navegação existente... -->
+                </nav>
+        
+                <main>
+                    <!-- Seção de Sobre Mim -->
+                    <!-- Seção de Contato -->
+                    <!-- Seção de Serviços (nova página) -->
+        
+                    <!-- Seção da Calculadora -->
+                    <section>
+                        <h2 class="text-center">Calculadora</h2>
+                        <div class="calculator">
+                            <input type="text" id="display" class="form-control mb-2 text-center" readonly>
+                            <div class="row">
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('7')">7</button>
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('8')">8</button>
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('9')">9</button>
+                                <button class="btn btn-warning col-3" onclick="addToDisplay('+')">+</button>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('4')">4</button>
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('5')">5</button>
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('6')">6</button>
+                                <button class="btn btn-warning col-3" onclick="addToDisplay('-')">-</button>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('1')">1</button>
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('2')">2</button>
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('3')">3</button>
+                                <button class="btn btn-warning col-3" onclick="addToDisplay('*')">*</button>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-secondary col-3" onclick="clearDisplay()">C</button>
+                                <button class="btn btn-primary col-3" onclick="addToDisplay('0')">0</button>
+                                <button class="btn btn-success col-3" onclick="calculate()">=</button>
+                                <button class="btn btn-warning col-3" onclick="addToDisplay('/')">/</button>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        
+            <footer>
+                <p>&copy; 2023 Meu Site Simples. Todos os direitos reservados.</p>
+            </footer>
+        
+            <!-- Adicione o link para o JavaScript do Bootstrap -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            
+            <!-- Adicione o script JavaScript para a calculadora -->
+            <script>
+                let currentInput = '';
+        
+                function addToDisplay(value) {
+                    currentInput += value;
+                    document.getElementById('display').value = currentInput;
+                }
+        
+                function clearDisplay() {
+                    currentInput = '';
+                    document.getElementById('display').value = '';
+                }
+        
+                function calculate() {
+                    try {
+                        const result = eval(currentInput);
+                        document.getElementById('display').value = result;
+                        currentInput = result.toString();
+                    } catch (error) {
+                        document.getElementById('display').value = 'Erro';
+                    }
+                }
+            </script>
+        </body>
+        </html>
+                
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Meu Site Simples. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Adicione o link para o JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
